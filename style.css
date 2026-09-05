@@ -72,10 +72,6 @@ body {
 }
 
 
-/* =========================================================
-   LEFT LOGO
-========================================================= */
-
 .logo {
     color: var(--red);
     text-decoration: none;
@@ -88,10 +84,6 @@ body {
     line-height: 1;
 }
 
-
-/* =========================================================
-   NAV LINKS
-========================================================= */
 
 .nav-links {
     display: flex;
@@ -129,6 +121,186 @@ body {
 
 
 /* =========================================================
+   VOLUME CONTROL
+========================================================= */
+
+.volume-control {
+    position: fixed;
+
+    right: 4.1%;
+    bottom: 2.2%;
+
+    z-index: 10000;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   VOLUME SLIDER
+========================================================= */
+
+.volume-slider-container {
+    width: 0;
+    height: 42px;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(18, 8, 9, 0.95);
+
+    border: 1px solid var(--red);
+
+    border-radius: 25px;
+
+    opacity: 0;
+
+    transition:
+        width 0.3s ease,
+        opacity 0.3s ease,
+        padding 0.3s ease;
+}
+
+
+.volume-control:hover .volume-slider-container {
+    width: 130px;
+
+    padding: 0 12px;
+
+    opacity: 1;
+}
+
+
+.volume-slider {
+    width: 100%;
+    height: 4px;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background: #777;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+.volume-slider::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+
+    background: var(--red);
+
+    border: none;
+
+    cursor: pointer;
+}
+
+
+.volume-slider::-moz-range-thumb {
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+
+    background: var(--red);
+
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   VOLUME BUTTON
+========================================================= */
+
+.volume-button {
+    width: 60px;
+    height: 60px;
+
+    border: 1px solid var(--red);
+
+    border-radius: 50%;
+
+    background: rgba(18, 8, 9, 0.90);
+
+    color: var(--red);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   RED SVG VOLUME ICON
+========================================================= */
+
+.volume-button span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.volume-svg {
+    width: 27px;
+    height: 27px;
+
+    display: block;
+
+    fill: currentColor;
+
+    color: var(--red);
+}
+
+
+.volume-button:hover {
+    background: rgba(217, 0, 0, 0.12);
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 15px rgba(217, 0, 0, 0.25);
+}
+
+
+.volume-button:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================================================
    SECTIONS
 ========================================================= */
 
@@ -152,7 +324,9 @@ section {
     padding-top: 100px;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: flex-start;
 }
 
@@ -171,10 +345,6 @@ section {
     position: relative;
 }
 
-
-/* =========================================================
-   MY
-========================================================= */
 
 .my-script {
     display: block;
@@ -197,10 +367,6 @@ section {
 }
 
 
-/* =========================================================
-   PORTFOLIO ROW
-========================================================= */
-
 .portfolio-title {
     width: 100%;
 
@@ -212,10 +378,6 @@ section {
     gap: 55px;
 }
 
-
-/* =========================================================
-   PORTFOLIO
-========================================================= */
 
 .portfolio-title h1 {
     color: var(--red);
@@ -233,10 +395,6 @@ section {
     line-height: 0.9;
 }
 
-
-/* =========================================================
-   SIDE LINES
-========================================================= */
 
 .title-line {
     width: 18%;
@@ -283,10 +441,6 @@ section {
 }
 
 
-/* =========================================================
-   SECTION HEADING LINES
-========================================================= */
-
 .section-heading::before,
 .section-heading::after {
     content: "";
@@ -298,10 +452,6 @@ section {
     flex: 1;
 }
 
-
-/* =========================================================
-   MAIN HEADING
-========================================================= */
 
 .section-heading h2 {
     font-family: "Instrument Serif", serif;
@@ -319,10 +469,6 @@ section {
     color: var(--text);
 }
 
-
-/* =========================================================
-   SCRIPT "MY"
-========================================================= */
 
 .heading-script {
     color: var(--red);
@@ -358,10 +504,6 @@ section {
 }
 
 
-/* =========================================================
-   LABEL
-========================================================= */
-
 .section-label {
     color: var(--red);
 
@@ -374,10 +516,6 @@ section {
     margin-bottom: 5px;
 }
 
-
-/* =========================================================
-   NAME
-========================================================= */
 
 .about-text h2 {
     color: var(--text);
@@ -393,10 +531,6 @@ section {
     margin: 15px 0 30px;
 }
 
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
 
 .description {
     color: var(--gray);
@@ -415,10 +549,6 @@ section {
 }
 
 
-/* =========================================================
-   QUOTE
-========================================================= */
-
 .quote {
     margin-top: 45px;
 
@@ -430,26 +560,12 @@ section {
 }
 
 
-.quote span {
-    font-weight: 400;
-}
-
-
 .quote p {
     margin-top: 8px;
 
     color: var(--gray);
 
     font-style: italic;
-}
-
-
-/* =========================================================
-   PROFILE
-========================================================= */
-
-.profile-container {
-    width: 100%;
 }
 
 
@@ -495,10 +611,6 @@ section {
 }
 
 
-/* =========================================================
-   PRELIM / MIDTERM / FINALS
-========================================================= */
-
 .quiz-column h3 {
     color: var(--red);
 
@@ -513,8 +625,6 @@ section {
     margin-bottom: 25px;
 }
 
-
-/* LINE UNDER TITLE */
 
 .quiz-column h3::after {
     content: "";
@@ -531,10 +641,6 @@ section {
 }
 
 
-/* =========================================================
-   QUIZ CARD + ARROWS
-========================================================= */
-
 .quiz-card-wrapper {
     width: 100%;
 
@@ -547,10 +653,6 @@ section {
     position: relative;
 }
 
-
-/* =========================================================
-   QUIZ CARD
-========================================================= */
 
 .quiz-card {
     width: 338px;
@@ -581,8 +683,6 @@ section {
 }
 
 
-/* HOVER */
-
 .quiz-card:hover {
     transform: translateY(-3px);
 
@@ -591,18 +691,10 @@ section {
 }
 
 
-/* =========================================================
-   QUIZ NUMBER
-========================================================= */
-
 .quiz-number {
     font-size: 17px;
 }
 
-
-/* =========================================================
-   SCORE
-========================================================= */
 
 .score {
     display: block;
@@ -624,20 +716,12 @@ section {
 }
 
 
-/* =========================================================
-   DATE
-========================================================= */
-
 .date {
     margin-top: 42px;
 
     font-size: 14px;
 }
 
-
-/* =========================================================
-   QUIZ ARROWS
-========================================================= */
 
 .quiz-arrow {
     width: 34px;
@@ -680,27 +764,15 @@ section {
 }
 
 
-/* =========================================================
-   LEFT ARROW
-========================================================= */
-
 .quiz-prev {
     left: 0;
 }
 
 
-/* =========================================================
-   RIGHT ARROW
-========================================================= */
-
 .quiz-next {
     right: 0;
 }
 
-
-/* =========================================================
-   ARROW HOVER
-========================================================= */
 
 .quiz-arrow:hover {
     background: white;
@@ -708,10 +780,6 @@ section {
     transform: scale(1.08);
 }
 
-
-/* =========================================================
-   QUIZ DOTS
-========================================================= */
 
 .quiz-dots {
     margin-top: 18px;
@@ -729,8 +797,6 @@ section {
     z-index: 4;
 }
 
-
-/* INDIVIDUAL DOT */
 
 .quiz-dot {
     width: 11px;
@@ -753,16 +819,12 @@ section {
 }
 
 
-/* ACTIVE DOT */
-
 .quiz-dot.active {
     background: var(--red);
 
     transform: scale(1.05);
 }
 
-
-/* HOVER */
 
 .quiz-dot:hover {
     transform: scale(1.25);
@@ -787,10 +849,6 @@ section {
 }
 
 
-/* =========================================================
-   EXAM CIRCLES
-========================================================= */
-
 .exam-circle {
     width: 340px;
 
@@ -807,10 +865,6 @@ section {
     background: var(--card);
 }
 
-
-/* =========================================================
-   EXAM LABEL
-========================================================= */
 
 .exam-item p {
     color: var(--red);
@@ -839,10 +893,6 @@ section {
 }
 
 
-/* =========================================================
-   LABORATORY HEADING
-========================================================= */
-
 .lab-heading {
     position: relative;
 
@@ -853,10 +903,6 @@ section {
     display: block;
 }
 
-
-/* =========================================================
-   RED "MY"
-========================================================= */
 
 .lab-heading .heading-script {
     position: absolute;
@@ -872,10 +918,6 @@ section {
     z-index: 3;
 }
 
-
-/* =========================================================
-   LABORATORY TEXT
-========================================================= */
 
 .lab-heading h2 {
     position: absolute;
@@ -893,11 +935,6 @@ section {
     white-space: nowrap;
 }
 
-
-/* =========================================================
-   LEFT LINE
-   RAISED SLIGHTLY
-========================================================= */
 
 .lab-heading::before {
     content: "";
@@ -918,19 +955,10 @@ section {
 }
 
 
-/* =========================================================
-   RIGHT LINE
-   REMOVED
-========================================================= */
-
 .lab-heading::after {
     display: none;
 }
 
-
-/* =========================================================
-   LAB COLUMNS
-========================================================= */
 
 .lab-container {
     width: 1220px;
@@ -957,10 +985,6 @@ section {
 }
 
 
-/* =========================================================
-   PRELIM / MIDTERM / FINALS
-========================================================= */
-
 .lab-column h3 {
     color: var(--red);
 
@@ -975,10 +999,6 @@ section {
     margin-bottom: 25px;
 }
 
-
-/* =========================================================
-   LINE UNDER TITLE
-========================================================= */
 
 .lab-column h3::after {
     content: "";
@@ -995,10 +1015,6 @@ section {
 }
 
 
-/* =========================================================
-   CARD + ARROWS
-========================================================= */
-
 .lab-card-wrapper {
     width: 100%;
 
@@ -1012,10 +1028,6 @@ section {
 }
 
 
-/* =========================================================
-   LAB CARD LINK
-========================================================= */
-
 .lab-card-link {
     width: 338px;
 
@@ -1028,10 +1040,6 @@ section {
     color: inherit;
 }
 
-
-/* =========================================================
-   LAB CARD
-========================================================= */
 
 .lab-card {
     width: 338px;
@@ -1064,10 +1072,6 @@ section {
 }
 
 
-/* =========================================================
-   HOVER
-========================================================= */
-
 .lab-card-link:hover .lab-card {
     transform: translateY(-3px);
 
@@ -1075,10 +1079,6 @@ section {
         0 5px 18px rgba(214, 0, 0, 0.25);
 }
 
-
-/* =========================================================
-   LAB NUMBER
-========================================================= */
 
 .lab-number {
     width: 50%;
@@ -1095,10 +1095,6 @@ section {
 }
 
 
-/* =========================================================
-   LAB IMAGE
-========================================================= */
-
 .lab-card .lab-image {
     width: 50%;
 
@@ -1109,10 +1105,6 @@ section {
     display: block;
 }
 
-
-/* =========================================================
-   EMPTY IMAGE
-========================================================= */
 
 .lab-placeholder {
     width: 50%;
@@ -1136,11 +1128,6 @@ section {
     flex-shrink: 0;
 }
 
-
-/* =========================================================
-   ARROWS
-   MOVED BELOW THE CARD
-========================================================= */
 
 .lab-arrow {
     width: 34px;
@@ -1183,27 +1170,15 @@ section {
 }
 
 
-/* =========================================================
-   LEFT ARROW
-========================================================= */
-
 .lab-prev {
     left: 0;
 }
 
 
-/* =========================================================
-   RIGHT ARROW
-========================================================= */
-
 .lab-next {
     right: 0;
 }
 
-
-/* =========================================================
-   ARROW HOVER
-========================================================= */
 
 .lab-arrow:hover {
     background: white;
@@ -1211,10 +1186,6 @@ section {
     transform: scale(1.08);
 }
 
-
-/* =========================================================
-   LAB DOTS
-========================================================= */
 
 .lab-dots {
     margin-top: 18px;
@@ -1232,10 +1203,6 @@ section {
     z-index: 4;
 }
 
-
-/* =========================================================
-   INDIVIDUAL DOT
-========================================================= */
 
 .lab-dot {
     width: 11px;
@@ -1258,10 +1225,6 @@ section {
 }
 
 
-/* =========================================================
-   ACTIVE DOT
-========================================================= */
-
 .lab-dot.active {
     background: var(--red);
 
@@ -1269,23 +1232,102 @@ section {
 }
 
 
-/* =========================================================
-   DOT HOVER
-========================================================= */
-
 .lab-dot:hover {
     transform: scale(1.25);
 }
 
 
 /* =========================================================
-   MOBILE
+   TABLET
+   901px - 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    section {
+        width: 90%;
+    }
+
+
+    .quiz-container,
+    .lab-container {
+        width: 100%;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 25px;
+    }
+
+
+    .quiz-column,
+    .lab-column {
+        width: 100%;
+    }
+
+
+    .quiz-card,
+    .lab-card,
+    .lab-card-link {
+        width: 100%;
+    }
+
+
+    .about-container {
+        grid-template-columns:
+            minmax(0, 1fr)
+            380px;
+
+        gap: 50px;
+    }
+
+
+    .exam-container {
+        gap: 30px;
+    }
+
+
+    .exam-circle {
+        width: 280px;
+        height: 280px;
+    }
+
+
+    .lab-heading {
+        height: 250px;
+    }
+
+
+    .lab-heading h2 {
+        left: 65px;
+    }
+
+
+    .lab-heading::before {
+        left: 210px;
+        width: 55%;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   Up to 900px
 ========================================================= */
 
 @media (max-width: 900px) {
 
+    /* -------------------------
+       NAVIGATION
+    ------------------------- */
+
     .navbar {
+        height: 65px;
+
         padding: 0 4%;
+
+        background: rgba(18, 8, 9, 0.98);
     }
 
 
@@ -1295,14 +1337,47 @@ section {
 
 
     .nav-links a {
-        font-size: 12px;
+        font-size: 11px;
+
+        letter-spacing: 1px;
     }
 
+
+    /* -------------------------
+       REMOVE HUGE MOBILE SPACES
+    ------------------------- */
 
     section {
         width: 92%;
 
-        padding: 90px 0;
+        min-height: auto;
+
+        padding: 80px 0;
+    }
+
+
+    .home {
+        min-height: auto;
+
+        padding-top: 95px;
+
+        padding-bottom: 60px;
+    }
+
+
+    /* -------------------------
+       HERO IMAGE
+    ------------------------- */
+
+    .hero-title {
+        margin-bottom: 28px;
+    }
+
+
+    .my-script {
+        font-size: 75px;
+
+        transform: translateY(14px);
     }
 
 
@@ -1312,24 +1387,56 @@ section {
 
 
     .portfolio-title h1 {
-        font-size: 65px;
+        font-size: clamp(
+            55px,
+            9vw,
+            85px
+        );
+
+        letter-spacing: -3px;
     }
 
 
     .title-line {
-        width: 12%;
+        width: 15%;
     }
 
+
+    /*
+       The image now scales with the screen
+       instead of staying 585px tall.
+    */
 
     .people-image {
-        height: 400px;
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 16 / 9;
+
+        object-fit: cover;
+
+        border-radius: 6px;
     }
 
 
-    .about-container {
-        grid-template-columns: 1fr 330px;
+    /* -------------------------
+       ABOUT
+    ------------------------- */
 
-        gap: 40px;
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .about-text h2 {
+        font-size: clamp(
+            65px,
+            10vw,
+            90px
+        );
     }
 
 
@@ -1338,23 +1445,160 @@ section {
     }
 
 
-    .cards-container,
+    .profile-image {
+        width: min(
+            100%,
+            420px
+        );
+
+        margin: 0 auto;
+    }
+
+
+    /* -------------------------
+       QUIZ
+    ------------------------- */
+
+    .quiz-container {
+        width: 100%;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 15px;
+    }
+
+
+    .quiz-column {
+        width: 100%;
+    }
+
+
+    .quiz-card {
+        width: 100%;
+
+        height: 190px;
+
+        padding: 14px;
+
+        font-size: 13px;
+    }
+
+
+    .quiz-number {
+        font-size: 12px;
+    }
+
+
+    .score {
+        margin-top: 35px;
+
+        font-size: 15px;
+    }
+
+
+    .score strong {
+        font-size: 18px;
+    }
+
+
+    .date {
+        margin-top: 30px;
+
+        font-size: 10px;
+    }
+
+
+    .quiz-column h3 {
+        font-size: 14px;
+
+        letter-spacing: 2px;
+    }
+
+
+    /* -------------------------
+       EXAMS
+    ------------------------- */
+
     .exam-container {
-        gap: 35px;
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 25px;
     }
 
 
     .exam-circle {
-        width: 230px;
+        width: 100%;
 
-        height: 230px;
+        aspect-ratio: 1 / 1;
+
+        height: auto;
     }
 
 
-    /* LAB */
+    .exam-item p {
+        margin-top: 25px;
+
+        font-size: 13px;
+    }
+
+
+    /* -------------------------
+       LAB
+    ------------------------- */
+
+    .lab-section {
+        width: 92%;
+
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .lab-heading {
+        height: 220px;
+    }
+
+
+    .lab-heading .heading-script {
+        left: 0;
+
+        top: 25px;
+
+        font-size: 75px;
+    }
+
+
+    .lab-heading h2 {
+        left: 55px;
+
+        top: 75px;
+
+        font-size: clamp(
+            55px,
+            8vw,
+            85px
+        );
+    }
+
+
+    .lab-heading::before {
+        left: 175px;
+
+        top: 62px;
+
+        width: 50%;
+    }
+
 
     .lab-container {
-        gap: 25px;
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 15px;
+
+        width: 100%;
     }
 
 
@@ -1363,18 +1607,71 @@ section {
     }
 
 
+    .lab-column h3 {
+        font-size: 14px;
+
+        letter-spacing: 2px;
+    }
+
+
     .lab-card-link,
     .lab-card {
         width: 100%;
     }
+
+
+    .lab-card {
+        height: 190px;
+    }
+
+
+    .lab-number {
+        padding-left: 15px;
+
+        font-size: 13px;
+    }
+
+
+    .lab-placeholder {
+        font-size: 9px;
+    }
+
+
+    /* -------------------------
+       VOLUME
+    ------------------------- */
+
+    .volume-control {
+        right: 3%;
+
+        bottom: 3%;
+    }
+
+
+    .volume-button {
+        width: 55px;
+        height: 55px;
+    }
+
+
+    .volume-svg {
+        width: 25px;
+        height: 25px;
+    }
+
 }
 
 
 /* =========================================================
-   SMALL MOBILE
+   PHONE
+   Up to 650px
 ========================================================= */
 
 @media (max-width: 650px) {
+
+    /* -------------------------
+       NAVBAR
+    ------------------------- */
 
     .navbar {
         height: auto;
@@ -1388,200 +1685,337 @@ section {
 
 
     .logo {
-        font-size: 13px;
+        font-size: 12px;
 
-        letter-spacing: 3px;
+        letter-spacing: 2px;
     }
 
 
     .nav-links {
-        gap: 8px;
+        gap: 7px;
 
         flex-wrap: wrap;
 
         justify-content: flex-end;
+
+        max-width: 75%;
     }
 
 
     .nav-links a {
-        font-size: 8px;
+        font-size: 7px;
 
-        letter-spacing: 1px;
+        letter-spacing: 0.7px;
     }
 
+
+    /* -------------------------
+       SECTIONS
+    ------------------------- */
 
     section {
         width: 90%;
 
-        padding: 90px 0;
+        padding: 65px 0;
     }
 
 
-    /* =====================================================
+    /* -------------------------
        HOME
-    ===================================================== */
+    ------------------------- */
 
     .home {
-        padding-top: 100px;
+        padding-top: 95px;
+
+        padding-bottom: 40px;
+    }
+
+
+    .hero-title {
+        margin-bottom: 22px;
     }
 
 
     .my-script {
-        font-size: 70px;
+        font-size: 62px;
+
+        line-height: 0.4;
+
+        transform: translateY(12px);
     }
 
 
     .portfolio-title {
-        gap: 8px;
+        gap: 7px;
     }
 
 
     .portfolio-title h1 {
-        font-size: 48px;
+        font-size: clamp(
+            42px,
+            12vw,
+            60px
+        );
 
         letter-spacing: -2px;
     }
 
 
     .title-line {
-        width: 8%;
+        width: 10%;
+
+        height: 1px;
     }
 
+
+    /*
+       Phone image:
+       width follows phone,
+       height follows aspect ratio,
+       no giant empty space.
+    */
 
     .people-image {
-        height: 250px;
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 16 / 9;
+
+        object-fit: cover;
+
+        border-radius: 5px;
     }
 
 
-    /* =====================================================
+    /* -------------------------
        HEADINGS
-    ===================================================== */
+    ------------------------- */
 
     .section-heading {
         gap: 8px;
 
-        margin-bottom: 55px;
+        margin-bottom: 45px;
     }
 
 
     .section-heading h2 {
-        font-size: 50px;
+        font-size: 45px;
     }
 
 
     .heading-script {
-        font-size: 65px;
+        font-size: 60px;
 
-        top: 20px;
+        top: 18px;
     }
 
 
-    /* =====================================================
+    /* -------------------------
        ABOUT
-    ===================================================== */
+    ------------------------- */
 
     .about-container {
         grid-template-columns: 1fr;
 
-        gap: 40px;
+        gap: 35px;
     }
 
 
     .section-label {
-        font-size: 20px;
+        font-size: 18px;
     }
 
 
     .about-text h2 {
-        font-size: 70px;
+        font-size: 62px;
+
+        margin: 12px 0 25px;
     }
 
 
     .description {
-        font-size: 11px;
+        font-size: 10px;
+
+        line-height: 1.6;
     }
 
 
     .quote {
-        font-size: 10px;
+        margin-top: 30px;
+
+        font-size: 9px;
+    }
+
+
+    .quote p {
+        margin-top: 7px;
     }
 
 
     .profile-image {
+        width: 100%;
+
         max-width: 320px;
 
         margin: auto;
     }
 
 
-    /* =====================================================
-       CARDS
-    ===================================================== */
+    /* -------------------------
+       QUIZ
+    ------------------------- */
 
-    .cards-container {
+    .quiz-container {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+
+        width: 100%;
+    }
+
+
+    .quiz-column {
+        width: 100%;
+    }
+
+
+    .quiz-column h3 {
+        font-size: 13px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .quiz-card {
+        width: 100%;
+
+        height: 180px;
+
+        padding: 14px;
+    }
+
+
+    .quiz-number {
+        font-size: 11px;
+    }
+
+
+    .score {
+        margin-top: 35px;
+
+        font-size: 14px;
+    }
+
+
+    .score strong {
+        font-size: 17px;
+    }
+
+
+    .date {
+        margin-top: 28px;
+
+        font-size: 9px;
+    }
+
+
+    .quiz-arrow {
+        width: 28px;
+
+        height: 28px;
+
+        font-size: 20px;
+
+        top: calc(100% + 5px);
+    }
+
+
+    .quiz-dots {
+        margin-top: 15px;
+
+        gap: 9px;
+    }
+
+
+    .quiz-dot {
+        width: 9px;
+        height: 9px;
+    }
+
+
+    /* -------------------------
+       EXAMS
+    ------------------------- */
+
+    .exam-container {
         grid-template-columns: 1fr;
 
         gap: 55px;
     }
 
 
-    .quiz-card,
-    .lab-card {
-        height: 200px;
-    }
-
-
-    /* =====================================================
-       EXAMS
-    ===================================================== */
-
-    .exam-container {
-        grid-template-columns: 1fr;
-
-        gap: 60px;
-    }
-
-
     .exam-circle {
-        width: 280px;
+        width: min(
+            280px,
+            75vw
+        );
 
-        height: 280px;
+        height: auto;
+
+        aspect-ratio: 1 / 1;
     }
 
 
-    /* =====================================================
+    .exam-item p {
+        margin-top: 20px;
+
+        font-size: 11px;
+    }
+
+
+    /* -------------------------
        LABORATORY
-    ===================================================== */
+    ------------------------- */
+
+    .lab-section {
+        width: 90%;
+    }
+
 
     .lab-heading {
-        height: 220px;
+        height: 175px;
+
+        margin-bottom: 5px;
     }
 
 
     .lab-heading .heading-script {
         left: 0;
 
-        top: 30px;
+        top: 20px;
 
-        font-size: 70px;
+        font-size: 60px;
     }
 
 
     .lab-heading h2 {
-        left: 55px;
+        left: 45px;
 
-        top: 80px;
+        top: 65px;
 
-        font-size: 50px;
+        font-size: 45px;
     }
 
 
     .lab-heading::before {
-        left: 165px;
+        left: 140px;
 
-        top: 72px;
+        top: 55px;
 
-        width: 250px;
+        width: 55%;
+
+        height: 1px;
     }
 
 
@@ -1599,6 +2033,13 @@ section {
     }
 
 
+    .lab-column h3 {
+        font-size: 13px;
+
+        margin-bottom: 18px;
+    }
+
+
     .lab-card-wrapper {
         width: 100%;
     }
@@ -1609,24 +2050,141 @@ section {
         width: 100%;
 
         max-width: 338px;
+
+        margin: auto;
+    }
+
+
+    .lab-card {
+        height: 200px;
+    }
+
+
+    .lab-number {
+        padding-left: 35px;
+
+        font-size: 13px;
+    }
+
+
+    .lab-placeholder {
+        font-size: 9px;
     }
 
 
     .lab-arrow {
-        width: 30px;
+        width: 28px;
 
-        height: 30px;
+        height: 28px;
 
-        font-size: 21px;
+        font-size: 20px;
     }
 
 
     .lab-prev {
-        left: calc(50% - 169px - 15px);
+        left: calc(50% - min(169px, 50%) - 14px);
     }
 
 
     .lab-next {
-        right: calc(50% - 169px - 15px);
+        right: calc(50% - min(169px, 50%) - 14px);
     }
+
+
+    .lab-dots {
+        margin-top: 15px;
+
+        gap: 9px;
+    }
+
+
+    .lab-dot {
+        width: 9px;
+        height: 9px;
+    }
+
+
+    /* -------------------------
+       VOLUME
+    ------------------------- */
+
+    .volume-control {
+        right: 4%;
+
+        bottom: 3%;
+    }
+
+
+    .volume-button {
+        width: 52px;
+
+        height: 52px;
+    }
+
+
+    .volume-svg {
+        width: 23px;
+
+        height: 23px;
+    }
+
+
+    .volume-control:hover .volume-slider-container {
+        width: 110px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   Up to 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .nav-links {
+        gap: 5px;
+    }
+
+
+    .nav-links a {
+        font-size: 6px;
+    }
+
+
+    .my-script {
+        font-size: 55px;
+    }
+
+
+    .portfolio-title h1 {
+        font-size: 39px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 39px;
+    }
+
+
+    .heading-script {
+        font-size: 54px;
+    }
+
+
+    .about-text h2 {
+        font-size: 55px;
+    }
+
+
+    .quiz-card {
+        height: 175px;
+    }
+
+
+    .lab-card {
+        height: 185px;
+    }
+
 }
