@@ -13,6 +13,17 @@
 <body>
 
     <!-- =========================================================
+         BACKGROUND MUSIC
+    ========================================================== -->
+
+    <audio
+        id="backgroundMusic"
+        src="Close to You.mp3"
+        loop
+    ></audio>
+
+
+    <!-- =========================================================
          FIXED NAVIGATION BAR
     ========================================================== -->
 
@@ -47,6 +58,73 @@
         </ul>
 
     </nav>
+
+
+
+    <!-- =========================================================
+         VOLUME CONTROL
+    ========================================================== -->
+
+    <div class="volume-control">
+
+        <div
+            class="volume-slider-container"
+            id="volumeSliderContainer"
+        >
+
+            <input
+                type="range"
+                id="volumeSlider"
+                class="volume-slider"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.5"
+                aria-label="Volume"
+            >
+
+        </div>
+
+
+        <button
+            id="volumeButton"
+            class="volume-button"
+            type="button"
+            aria-label="Play sound"
+            title="Play sound"
+        >
+
+            <!-- RED SVG VOLUME ICON -->
+            <span id="volumeIcon">
+
+                <svg
+                    class="volume-svg"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path d="M3 9v6h4l5 4V5L7 9H3z"></path>
+                    <path
+                        d="M14.5 8.5c1.3 1.3 1.3 5.7 0 7"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                    ></path>
+                    <path
+                        d="M17.5 6c2.7 2.7 2.7 9.3 0 12"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                    ></path>
+                </svg>
+
+            </span>
+
+        </button>
+
+    </div>
+
 
 
     <!-- =========================================================
@@ -112,20 +190,16 @@
                     </h2>
 
                     <p class="description">
-
                         Hi! I'm Rain Chantelle Tangalin and a 3rd year
                         BS Computer Science student with a passion for
                         UI/UX design and creating clean, user-friendly
                         digital experiences.
-
                     </p>
 
                     <p class="description">
-
                         I enjoy exploring creative ways to design,
                         analyze problems, adapt to new technologies,
                         and improve my skills in design and technology.
-
                     </p>
 
 
@@ -184,9 +258,7 @@
             <div class="quiz-container">
 
 
-                <!-- =================================================
-                     PRELIM
-                ================================================== -->
+                <!-- PRELIM -->
 
                 <div class="quiz-column">
 
@@ -194,10 +266,8 @@
                         PRELIM
                     </h3>
 
-
                     <div class="quiz-card-wrapper">
 
-                        <!-- PREVIOUS -->
                         <button
                             class="quiz-arrow quiz-prev"
                             type="button"
@@ -207,7 +277,6 @@
                         </button>
 
 
-                        <!-- QUIZ CARD -->
                         <div class="quiz-card">
 
                             <p class="quiz-number">
@@ -229,7 +298,6 @@
                         </div>
 
 
-                        <!-- NEXT -->
                         <button
                             class="quiz-arrow quiz-next"
                             type="button"
@@ -241,39 +309,13 @@
                     </div>
 
 
-                    <!-- QUIZ DOTS -->
-
                     <div class="quiz-dots">
 
-                        <button
-                            class="quiz-dot active"
-                            type="button"
-                            aria-label="Go to Prelim Quiz 1"
-                        ></button>
-
-                        <button
-                            class="quiz-dot"
-                            type="button"
-                            aria-label="Go to Prelim Quiz 2"
-                        ></button>
-
-                        <button
-                            class="quiz-dot"
-                            type="button"
-                            aria-label="Go to Prelim Quiz 3"
-                        ></button>
-
-                        <button
-                            class="quiz-dot"
-                            type="button"
-                            aria-label="Go to Prelim Quiz 4"
-                        ></button>
-
-                        <button
-                            class="quiz-dot"
-                            type="button"
-                            aria-label="Go to Prelim Quiz 5"
-                        ></button>
+                        <button class="quiz-dot active"></button>
+                        <button class="quiz-dot"></button>
+                        <button class="quiz-dot"></button>
+                        <button class="quiz-dot"></button>
+                        <button class="quiz-dot"></button>
 
                     </div>
 
@@ -281,9 +323,7 @@
 
 
 
-                <!-- =================================================
-                     MIDTERM
-                ================================================== -->
+                <!-- MIDTERM -->
 
                 <div class="quiz-column">
 
@@ -291,20 +331,16 @@
                         MIDTERM
                     </h3>
 
-
                     <div class="quiz-card-wrapper">
 
-                        <!-- PREVIOUS -->
                         <button
                             class="quiz-arrow quiz-prev"
                             type="button"
-                            aria-label="Previous Midterm Quiz"
                         >
                             ←
                         </button>
 
 
-                        <!-- QUIZ CARD -->
                         <div class="quiz-card">
 
                             <p class="quiz-number">
@@ -326,11 +362,9 @@
                         </div>
 
 
-                        <!-- NEXT -->
                         <button
                             class="quiz-arrow quiz-next"
                             type="button"
-                            aria-label="Next Midterm Quiz"
                         >
                             →
                         </button>
@@ -338,39 +372,13 @@
                     </div>
 
 
-                    <!-- QUIZ DOTS -->
-
                     <div class="quiz-dots">
 
-                        <button
-                            class="quiz-dot active"
-                            type="button"
-                            aria-label="Go to Midterm Quiz 1"
-                        ></button>
-
-                        <button
-                            class="quiz-dot"
-                            type="button"
-                            aria-label="Go to Midterm Quiz 2"
-                        ></button>
-
-                        <button
-                            class="quiz-dot"
-                            type="button"
-                            aria-label="Go to Midterm Quiz 3"
-                        ></button>
-
-                        <button
-                            class="quiz-dot"
-                            type="button"
-                            aria-label="Go to Midterm Quiz 4"
-                        ></button>
-
-                        <button
-                            class="quiz-dot"
-                            type="button"
-                            aria-label="Go to Midterm Quiz 5"
-                        ></button>
+                        <button class="quiz-dot active"></button>
+                        <button class="quiz-dot"></button>
+                        <button class="quiz-dot"></button>
+                        <button class="quiz-dot"></button>
+                        <button class="quiz-dot"></button>
 
                     </div>
 
@@ -378,9 +386,7 @@
 
 
 
-                <!-- =================================================
-                     FINALS
-                ================================================== -->
+                <!-- FINALS -->
 
                 <div class="quiz-column">
 
@@ -388,20 +394,16 @@
                         FINALS
                     </h3>
 
-
                     <div class="quiz-card-wrapper">
 
-                        <!-- PREVIOUS -->
                         <button
                             class="quiz-arrow quiz-prev"
                             type="button"
-                            aria-label="Previous Finals Quiz"
                         >
                             ←
                         </button>
 
 
-                        <!-- QUIZ CARD -->
                         <div class="quiz-card">
 
                             <p class="quiz-number">
@@ -423,11 +425,9 @@
                         </div>
 
 
-                        <!-- NEXT -->
                         <button
                             class="quiz-arrow quiz-next"
                             type="button"
-                            aria-label="Next Finals Quiz"
                         >
                             →
                         </button>
@@ -435,39 +435,13 @@
                     </div>
 
 
-                    <!-- QUIZ DOTS -->
-
                     <div class="quiz-dots">
 
-                        <button
-                            class="quiz-dot active"
-                            type="button"
-                            aria-label="Go to Finals Quiz 1"
-                        ></button>
-
-                        <button
-                            class="quiz-dot"
-                            type="button"
-                            aria-label="Go to Finals Quiz 2"
-                        ></button>
-
-                        <button
-                            class="quiz-dot"
-                            type="button"
-                            aria-label="Go to Finals Quiz 3"
-                        ></button>
-
-                        <button
-                            class="quiz-dot"
-                            type="button"
-                            aria-label="Go to Finals Quiz 4"
-                        ></button>
-
-                        <button
-                            class="quiz-dot"
-                            type="button"
-                            aria-label="Go to Finals Quiz 5"
-                        ></button>
+                        <button class="quiz-dot active"></button>
+                        <button class="quiz-dot"></button>
+                        <button class="quiz-dot"></button>
+                        <button class="quiz-dot"></button>
+                        <button class="quiz-dot"></button>
 
                     </div>
 
@@ -500,11 +474,9 @@
 
             <div class="exam-container">
 
-                <!-- PRELIM -->
                 <div class="exam-item">
 
-                    <div class="exam-circle">
-                    </div>
+                    <div class="exam-circle"></div>
 
                     <p>
                         PRELIM
@@ -513,11 +485,9 @@
                 </div>
 
 
-                <!-- MIDTERM -->
                 <div class="exam-item">
 
-                    <div class="exam-circle">
-                    </div>
+                    <div class="exam-circle"></div>
 
                     <p>
                         MIDTERM
@@ -526,11 +496,9 @@
                 </div>
 
 
-                <!-- FINALS -->
                 <div class="exam-item">
 
-                    <div class="exam-circle">
-                    </div>
+                    <div class="exam-circle"></div>
 
                     <p>
                         FINALS
@@ -550,9 +518,6 @@
 
         <section id="lab" class="section lab-section">
 
-
-            <!-- LABORATORY HEADING -->
-
             <div class="section-heading lab-heading">
 
                 <span class="heading-script">
@@ -566,14 +531,10 @@
             </div>
 
 
-            <!-- LAB COLUMNS -->
-
             <div class="lab-container">
 
 
-                <!-- =================================================
-                     PRELIM
-                ================================================== -->
+                <!-- PRELIM -->
 
                 <div class="lab-column">
 
@@ -584,22 +545,17 @@
 
                     <div class="lab-card-wrapper">
 
-                        <!-- LEFT ARROW -->
-
                         <button
                             class="lab-arrow lab-prev"
                             type="button"
-                            aria-label="Previous Prelim Laboratory"
                         >
                             ←
                         </button>
 
 
-                        <!-- LAB CARD -->
-
                         <a
                             class="lab-card-link"
-                            href="YOUR_PRELIM_LAB1_PDF_LINK_HERE"
+                            href="Tangalin_Elective.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -622,12 +578,9 @@
                         </a>
 
 
-                        <!-- RIGHT ARROW -->
-
                         <button
                             class="lab-arrow lab-next"
                             type="button"
-                            aria-label="Next Prelim Laboratory"
                         >
                             →
                         </button>
@@ -635,39 +588,13 @@
                     </div>
 
 
-                    <!-- LAB DOTS -->
-
                     <div class="lab-dots">
 
-                        <button
-                            class="lab-dot active"
-                            type="button"
-                            aria-label="Go to Laboratory 1"
-                        ></button>
-
-                        <button
-                            class="lab-dot"
-                            type="button"
-                            aria-label="Go to Laboratory 2"
-                        ></button>
-
-                        <button
-                            class="lab-dot"
-                            type="button"
-                            aria-label="Go to Laboratory 3"
-                        ></button>
-
-                        <button
-                            class="lab-dot"
-                            type="button"
-                            aria-label="Go to Laboratory 4"
-                        ></button>
-
-                        <button
-                            class="lab-dot"
-                            type="button"
-                            aria-label="Go to Laboratory 5"
-                        ></button>
+                        <button class="lab-dot active"></button>
+                        <button class="lab-dot"></button>
+                        <button class="lab-dot"></button>
+                        <button class="lab-dot"></button>
+                        <button class="lab-dot"></button>
 
                     </div>
 
@@ -675,9 +602,7 @@
 
 
 
-                <!-- =================================================
-                     MIDTERM
-                ================================================== -->
+                <!-- MIDTERM -->
 
                 <div class="lab-column">
 
@@ -688,18 +613,13 @@
 
                     <div class="lab-card-wrapper">
 
-                        <!-- LEFT ARROW -->
-
                         <button
                             class="lab-arrow lab-prev"
                             type="button"
-                            aria-label="Previous Midterm Laboratory"
                         >
                             ←
                         </button>
 
-
-                        <!-- LAB CARD -->
 
                         <a
                             class="lab-card-link"
@@ -724,12 +644,9 @@
                         </a>
 
 
-                        <!-- RIGHT ARROW -->
-
                         <button
                             class="lab-arrow lab-next"
                             type="button"
-                            aria-label="Next Midterm Laboratory"
                         >
                             →
                         </button>
@@ -737,39 +654,13 @@
                     </div>
 
 
-                    <!-- LAB DOTS -->
-
                     <div class="lab-dots">
 
-                        <button
-                            class="lab-dot active"
-                            type="button"
-                            aria-label="Go to Laboratory 1"
-                        ></button>
-
-                        <button
-                            class="lab-dot"
-                            type="button"
-                            aria-label="Go to Laboratory 2"
-                        ></button>
-
-                        <button
-                            class="lab-dot"
-                            type="button"
-                            aria-label="Go to Laboratory 3"
-                        ></button>
-
-                        <button
-                            class="lab-dot"
-                            type="button"
-                            aria-label="Go to Laboratory 4"
-                        ></button>
-
-                        <button
-                            class="lab-dot"
-                            type="button"
-                            aria-label="Go to Laboratory 5"
-                        ></button>
+                        <button class="lab-dot active"></button>
+                        <button class="lab-dot"></button>
+                        <button class="lab-dot"></button>
+                        <button class="lab-dot"></button>
+                        <button class="lab-dot"></button>
 
                     </div>
 
@@ -777,9 +668,7 @@
 
 
 
-                <!-- =================================================
-                     FINALS
-                ================================================== -->
+                <!-- FINALS -->
 
                 <div class="lab-column">
 
@@ -790,18 +679,13 @@
 
                     <div class="lab-card-wrapper">
 
-                        <!-- LEFT ARROW -->
-
                         <button
                             class="lab-arrow lab-prev"
                             type="button"
-                            aria-label="Previous Finals Laboratory"
                         >
                             ←
                         </button>
 
-
-                        <!-- LAB CARD -->
 
                         <a
                             class="lab-card-link"
@@ -826,12 +710,9 @@
                         </a>
 
 
-                        <!-- RIGHT ARROW -->
-
                         <button
                             class="lab-arrow lab-next"
                             type="button"
-                            aria-label="Next Finals Laboratory"
                         >
                             →
                         </button>
@@ -839,39 +720,13 @@
                     </div>
 
 
-                    <!-- LAB DOTS -->
-
                     <div class="lab-dots">
 
-                        <button
-                            class="lab-dot active"
-                            type="button"
-                            aria-label="Go to Laboratory 1"
-                        ></button>
-
-                        <button
-                            class="lab-dot"
-                            type="button"
-                            aria-label="Go to Laboratory 2"
-                        ></button>
-
-                        <button
-                            class="lab-dot"
-                            type="button"
-                            aria-label="Go to Laboratory 3"
-                        ></button>
-
-                        <button
-                            class="lab-dot"
-                            type="button"
-                            aria-label="Go to Laboratory 4"
-                        ></button>
-
-                        <button
-                            class="lab-dot"
-                            type="button"
-                            aria-label="Go to Laboratory 5"
-                        ></button>
+                        <button class="lab-dot active"></button>
+                        <button class="lab-dot"></button>
+                        <button class="lab-dot"></button>
+                        <button class="lab-dot"></button>
+                        <button class="lab-dot"></button>
 
                     </div>
 
@@ -887,54 +742,355 @@
 
     <!-- =========================================================
          JAVASCRIPT
-         NAVIGATION + QUIZ CAROUSEL + LAB CAROUSEL
     ========================================================== -->
 
     <script>
 
         /* =========================================================
+           BACKGROUND MUSIC + VOLUME
+        ========================================================== */
+
+        const backgroundMusic =
+            document.getElementById("backgroundMusic");
+
+        const volumeButton =
+            document.getElementById("volumeButton");
+
+        const volumeIcon =
+            document.getElementById("volumeIcon");
+
+        const volumeSlider =
+            document.getElementById("volumeSlider");
+
+
+        backgroundMusic.volume = 0.5;
+
+
+        /* =========================================================
+           RED SVG VOLUME ICONS
+        ========================================================== */
+
+        function createVolumeIcon(type) {
+
+            let waves = "";
+
+            if (type === "low") {
+
+                waves = `
+                    <path
+                        d="M14.5 9c1 1 1 5 0 6"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                    ></path>
+                `;
+
+            }
+
+            else if (type === "medium") {
+
+                waves = `
+                    <path
+                        d="M14.5 8.5c1.3 1.3 1.3 5.7 0 7"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                    ></path>
+
+                    <path
+                        d="M17.5 6.5c2.5 2.5 2.5 8.5 0 11"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                    ></path>
+                `;
+
+            }
+
+            else if (type === "high") {
+
+                waves = `
+                    <path
+                        d="M14.5 8.5c1.3 1.3 1.3 5.7 0 7"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                    ></path>
+
+                    <path
+                        d="M17.5 6c2.7 2.7 2.7 9.3 0 12"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                    ></path>
+                `;
+
+            }
+
+            else if (type === "muted") {
+
+                waves = `
+                    <path
+                        d="M15 9l5 6"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                    ></path>
+
+                    <path
+                        d="M20 9l-5 6"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                    ></path>
+                `;
+
+            }
+
+            volumeIcon.innerHTML = `
+                <svg
+                    class="volume-svg"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <path
+                        d="M3 9v6h4l5 4V5L7 9H3z"
+                    ></path>
+
+                    ${waves}
+
+                </svg>
+            `;
+
+        }
+
+
+        /* =========================================================
+           UPDATE VOLUME ICON
+        ========================================================== */
+
+        function updateVolumeIcon() {
+
+            if (
+                backgroundMusic.muted ||
+                backgroundMusic.volume === 0
+            ) {
+
+                createVolumeIcon("muted");
+
+                volumeButton.setAttribute(
+                    "aria-label",
+                    "Unmute sound"
+                );
+
+                volumeButton.setAttribute(
+                    "title",
+                    "Unmute sound"
+                );
+
+                return;
+            }
+
+
+            if (backgroundMusic.volume <= 0.3) {
+
+                createVolumeIcon("low");
+
+            }
+
+            else if (backgroundMusic.volume <= 0.7) {
+
+                createVolumeIcon("medium");
+
+            }
+
+            else {
+
+                createVolumeIcon("high");
+
+            }
+
+
+            volumeButton.setAttribute(
+                "aria-label",
+                "Mute sound"
+            );
+
+            volumeButton.setAttribute(
+                "title",
+                "Mute sound"
+            );
+
+        }
+
+
+        /* =========================================================
+           VOLUME BUTTON
+        ========================================================== */
+
+        volumeButton.addEventListener(
+            "click",
+            () => {
+
+                if (backgroundMusic.paused) {
+
+                    backgroundMusic
+                        .play()
+                        .then(() => {
+
+                            backgroundMusic.muted = false;
+
+                            updateVolumeIcon();
+
+                        })
+                        .catch((error) => {
+
+                            console.log(
+                                "Music could not be played:",
+                                error
+                            );
+
+                        });
+
+                    return;
+                }
+
+
+                backgroundMusic.muted =
+                    !backgroundMusic.muted;
+
+                updateVolumeIcon();
+
+            }
+        );
+
+
+        /* =========================================================
+           VOLUME SLIDER
+        ========================================================== */
+
+        volumeSlider.addEventListener(
+            "input",
+            () => {
+
+                const volume =
+                    parseFloat(volumeSlider.value);
+
+                backgroundMusic.volume =
+                    volume;
+
+
+                if (volume === 0) {
+
+                    backgroundMusic.muted = true;
+
+                }
+
+                else {
+
+                    backgroundMusic.muted = false;
+
+                }
+
+
+                updateVolumeIcon();
+
+            }
+        );
+
+
+        /* =========================================================
+           START MUSIC WHEN SLIDER IS USED
+        ========================================================== */
+
+        volumeSlider.addEventListener(
+            "pointerdown",
+            () => {
+
+                if (backgroundMusic.paused) {
+
+                    backgroundMusic
+                        .play()
+                        .catch(() => {});
+
+                }
+
+            }
+        );
+
+
+        updateVolumeIcon();
+
+
+
+        /* =========================================================
            NAVIGATION ACTIVE LINK
         ========================================================== */
 
-        const sections = document.querySelectorAll("section");
-        const navLinks = document.querySelectorAll(".nav-links a");
+        const sections =
+            document.querySelectorAll("section");
 
-        const observer = new IntersectionObserver(
+        const navLinks =
+            document.querySelectorAll(".nav-links a");
 
-            (entries) => {
 
-                entries.forEach((entry) => {
+        const observer =
+            new IntersectionObserver(
 
-                    if (entry.isIntersecting) {
+                (entries) => {
 
-                        navLinks.forEach((link) => {
-                            link.classList.remove("active");
-                        });
+                    entries.forEach((entry) => {
 
-                        const activeLink = document.querySelector(
-                            '.nav-links a[href="#' +
-                            entry.target.id +
-                            '"]'
-                        );
+                        if (entry.isIntersecting) {
 
-                        if (activeLink) {
-                            activeLink.classList.add("active");
+                            navLinks.forEach((link) => {
+
+                                link.classList.remove("active");
+
+                            });
+
+
+                            const activeLink =
+                                document.querySelector(
+                                    '.nav-links a[href="#' +
+                                    entry.target.id +
+                                    '"]'
+                                );
+
+
+                            if (activeLink) {
+
+                                activeLink.classList.add(
+                                    "active"
+                                );
+
+                            }
+
                         }
 
-                    }
+                    });
 
-                });
+                },
 
-            },
+                {
+                    threshold: 0.4
+                }
 
-            {
-                threshold: 0.4
-            }
+            );
 
-        );
 
         sections.forEach((section) => {
+
             observer.observe(section);
+
         });
 
 
@@ -947,656 +1103,559 @@
             document.querySelectorAll(".quiz-column");
 
 
-        quizColumns.forEach((column, columnIndex) => {
+        quizColumns.forEach(
+            (column, columnIndex) => {
 
-            const card =
-                column.querySelector(".quiz-card");
+                const quizNumber =
+                    column.querySelector(".quiz-number");
 
-            const quizNumber =
-                column.querySelector(".quiz-number");
+                const score =
+                    column.querySelector(".score strong");
 
-            const score =
-                column.querySelector(".score strong");
+                const date =
+                    column.querySelector(".date");
 
-            const date =
-                column.querySelector(".date");
+                const nextButton =
+                    column.querySelector(".quiz-next");
 
-            const nextButton =
-                column.querySelector(".quiz-next");
+                const prevButton =
+                    column.querySelector(".quiz-prev");
 
-            const prevButton =
-                column.querySelector(".quiz-prev");
-
-            const dots =
-                column.querySelectorAll(".quiz-dot");
+                const dots =
+                    column.querySelectorAll(".quiz-dot");
 
 
-            let currentQuiz = 0;
+                let currentQuiz = 0;
 
 
+                const quizData = [
 
-            /* =====================================================
-               QUIZ DATA
+                    [
+                        {
+                            number: "1 (ONLINE)",
+                            score: "18/20",
+                            date: "AUG 25, 2026"
+                        },
 
-               CHANGE THESE VALUES WHEN YOU ADD YOUR REAL QUIZZES
-            ====================================================== */
+                        {
+                            number: "2",
+                            score: "—",
+                            date: "—"
+                        },
 
-            const quizData = [
+                        {
+                            number: "3",
+                            score: "—",
+                            date: "—"
+                        },
 
-                /* =========================
-                   PRELIM
-                ========================= */
+                        {
+                            number: "4",
+                            score: "—",
+                            date: "—"
+                        },
 
-                [
-                    {
-                        number: "1 (ONLINE)",
-                        score: "18/20",
-                        date: "AUG 25, 2026"
-                    },
+                        {
+                            number: "5",
+                            score: "—",
+                            date: "—"
+                        }
+                    ],
 
-                    {
-                        number: "2",
-                        score: "—",
-                        date: "—"
-                    },
+                    [
+                        {
+                            number: "1",
+                            score: "—",
+                            date: "—"
+                        },
 
-                    {
-                        number: "3",
-                        score: "—",
-                        date: "—"
-                    },
+                        {
+                            number: "2",
+                            score: "—",
+                            date: "—"
+                        },
 
-                    {
-                        number: "4",
-                        score: "—",
-                        date: "—"
-                    },
+                        {
+                            number: "3",
+                            score: "—",
+                            date: "—"
+                        },
 
-                    {
-                        number: "5",
-                        score: "—",
-                        date: "—"
-                    }
-                ],
+                        {
+                            number: "4",
+                            score: "—",
+                            date: "—"
+                        },
 
+                        {
+                            number: "5",
+                            score: "—",
+                            date: "—"
+                        }
+                    ],
 
-                /* =========================
-                   MIDTERM
-                ========================= */
+                    [
+                        {
+                            number: "1",
+                            score: "—",
+                            date: "—"
+                        },
 
-                [
-                    {
-                        number: "1",
-                        score: "—",
-                        date: "—"
-                    },
+                        {
+                            number: "2",
+                            score: "—",
+                            date: "—"
+                        },
 
-                    {
-                        number: "2",
-                        score: "—",
-                        date: "—"
-                    },
+                        {
+                            number: "3",
+                            score: "—",
+                            date: "—"
+                        },
 
-                    {
-                        number: "3",
-                        score: "—",
-                        date: "—"
-                    },
+                        {
+                            number: "4",
+                            score: "—",
+                            date: "—"
+                        },
 
-                    {
-                        number: "4",
-                        score: "—",
-                        date: "—"
-                    },
+                        {
+                            number: "5",
+                            score: "—",
+                            date: "—"
+                        }
+                    ]
 
-                    {
-                        number: "5",
-                        score: "—",
-                        date: "—"
-                    }
-                ],
-
-
-                /* =========================
-                   FINALS
-                ========================= */
-
-                [
-                    {
-                        number: "1",
-                        score: "—",
-                        date: "—"
-                    },
-
-                    {
-                        number: "2",
-                        score: "—",
-                        date: "—"
-                    },
-
-                    {
-                        number: "3",
-                        score: "—",
-                        date: "—"
-                    },
-
-                    {
-                        number: "4",
-                        score: "—",
-                        date: "—"
-                    },
-
-                    {
-                        number: "5",
-                        score: "—",
-                        date: "—"
-                    }
-                ]
-
-            ];
+                ];
 
 
-            const quizzes =
-                quizData[columnIndex];
+                const quizzes =
+                    quizData[columnIndex];
 
 
+                function showQuiz(index) {
 
-            /* =====================================================
-               SHOW QUIZ
-            ====================================================== */
+                    currentQuiz = index;
 
-            function showQuiz(index) {
-
-                currentQuiz = index;
-
-                const quiz =
-                    quizzes[currentQuiz];
+                    const quiz =
+                        quizzes[currentQuiz];
 
 
-                /* UPDATE QUIZ NUMBER */
+                    quizNumber.textContent =
+                        "QUIZ " + quiz.number;
 
-                quizNumber.textContent =
-                    "QUIZ " + quiz.number;
+                    score.textContent =
+                        quiz.score;
 
-
-                /* UPDATE SCORE */
-
-                score.textContent =
-                    quiz.score;
+                    date.textContent =
+                        quiz.date;
 
 
-                /* UPDATE DATE */
+                    dots.forEach(
+                        (dot, dotIndex) => {
 
-                date.textContent =
-                    quiz.date;
+                            dot.classList.toggle(
+                                "active",
+                                dotIndex === currentQuiz
+                            );
 
-
-                /* UPDATE ACTIVE DOT */
-
-                dots.forEach((dot, dotIndex) => {
-
-                    dot.classList.toggle(
-                        "active",
-                        dotIndex === currentQuiz
+                        }
                     );
 
-                });
-
-            }
-
-
-
-            /* =====================================================
-               NEXT QUIZ
-            ====================================================== */
-
-            nextButton.addEventListener(
-                "click",
-                () => {
-
-                    currentQuiz++;
-
-                    if (currentQuiz >= quizzes.length) {
-                        currentQuiz = 0;
-                    }
-
-                    showQuiz(currentQuiz);
-
                 }
-            );
 
 
-
-            /* =====================================================
-               PREVIOUS QUIZ
-            ====================================================== */
-
-            prevButton.addEventListener(
-                "click",
-                () => {
-
-                    currentQuiz--;
-
-                    if (currentQuiz < 0) {
-                        currentQuiz = quizzes.length - 1;
-                    }
-
-                    showQuiz(currentQuiz);
-
-                }
-            );
-
-
-
-            /* =====================================================
-               QUIZ DOTS
-            ====================================================== */
-
-            dots.forEach((dot, index) => {
-
-                dot.addEventListener(
+                nextButton.addEventListener(
                     "click",
                     () => {
 
-                        showQuiz(index);
+                        currentQuiz++;
+
+                        if (
+                            currentQuiz >=
+                            quizzes.length
+                        ) {
+
+                            currentQuiz = 0;
+
+                        }
+
+                        showQuiz(currentQuiz);
 
                     }
                 );
 
-            });
 
+                prevButton.addEventListener(
+                    "click",
+                    () => {
 
+                        currentQuiz--;
 
-            /* =====================================================
-               INITIAL QUIZ
-            ====================================================== */
+                        if (currentQuiz < 0) {
 
-            showQuiz(0);
+                            currentQuiz =
+                                quizzes.length - 1;
 
-        });
+                        }
 
+                        showQuiz(currentQuiz);
 
+                    }
+                );
 
-/* =========================================================
-   LABORATORY CAROUSEL
-========================================================= */
 
-const labColumns =
-    document.querySelectorAll(".lab-column");
+                dots.forEach(
+                    (dot, index) => {
 
+                        dot.addEventListener(
+                            "click",
+                            () => {
 
-/* =========================================================
-   LABORATORY DATA
-========================================================= */
+                                showQuiz(index);
 
-const labData = [
+                            }
+                        );
 
-    /* =========================
-       PRELIM
-    ========================= */
+                    }
+                );
 
-    [
-        {
-            number: "1",
-            image: "lab_1.jpg",
-            pdf: "Tangalin_Elective.pdf"
-        },
 
-        {
-            number: "2",
-            image: "lab_2.jpg",
-            pdf: "Tangalin_Lab2.pdf"
-        },
-
-        {
-            number: "3",
-            image: "",
-            pdf: "#"
-        },
-
-        {
-            number: "4",
-            image: "",
-            pdf: "#"
-        },
-
-        {
-            number: "5",
-            image: "",
-            pdf: "#"
-        }
-    ],
-
-
-    /* =========================
-       MIDTERM
-    ========================= */
-
-    [
-        {
-            number: "1",
-            image: "",
-            pdf: "#"
-        },
-
-        {
-            number: "2",
-            image: "",
-            pdf: "#"
-        },
-
-        {
-            number: "3",
-            image: "",
-            pdf: "#"
-        },
-
-        {
-            number: "4",
-            image: "",
-            pdf: "#"
-        },
-
-        {
-            number: "5",
-            image: "",
-            pdf: "#"
-        }
-    ],
-
-
-    /* =========================
-       FINALS
-    ========================= */
-
-    [
-        {
-            number: "1",
-            image: "",
-            pdf: "#"
-        },
-
-        {
-            number: "2",
-            image: "",
-            pdf: "#"
-        },
-
-        {
-            number: "3",
-            image: "",
-            pdf: "#"
-        },
-
-        {
-            number: "4",
-            image: "",
-            pdf: "#"
-        },
-
-        {
-            number: "5",
-            image: "",
-            pdf: "#"
-        }
-    ]
-
-];
-
-
-
-/* =========================================================
-   CREATE CAROUSEL FOR EACH COLUMN
-========================================================= */
-
-labColumns.forEach((column, columnIndex) => {
-
-    const cardLink =
-        column.querySelector(".lab-card-link");
-
-    const card =
-        column.querySelector(".lab-card");
-
-    const dots =
-        column.querySelectorAll(".lab-dot");
-
-    const nextButton =
-        column.querySelector(".lab-next");
-
-    const prevButton =
-        column.querySelector(".lab-prev");
-
-
-    let currentSlide = 0;
-
-
-    /* Get the correct data for this column */
-
-    const labs =
-        labData[columnIndex];
-
-
-
-    /* =====================================================
-       SHOW LAB
-    ====================================================== */
-
-    function showLab(index) {
-
-        currentSlide = index;
-
-        const lab =
-            labs[currentSlide];
-
-
-        /* =================================================
-           UPDATE LAB NUMBER
-        ================================================== */
-
-        const number =
-            card.querySelector(".lab-number");
-
-        number.innerHTML =
-            "LAB<br>NO. " + lab.number;
-
-
-
-        /* =================================================
-           UPDATE PDF LINK
-        ================================================== */
-
-        cardLink.href =
-            lab.pdf;
-
-
-
-        /* =================================================
-           UPDATE IMAGE
-        ================================================== */
-
-        let image =
-            card.querySelector(".lab-image");
-
-        let placeholder =
-            card.querySelector(".lab-placeholder");
-
-
-
-        /* =================================================
-           HAS IMAGE
-        ================================================== */
-
-        if (lab.image !== "") {
-
-            /* Create image if it doesn't exist */
-
-            if (!image) {
-
-                image =
-                    document.createElement("img");
-
-                image.className =
-                    "lab-image";
-
-                image.alt =
-                    "Laboratory " + lab.number;
-
-                card.appendChild(image);
-
-            }
-
-
-            image.src =
-                lab.image;
-
-            image.style.display =
-                "block";
-
-
-            /* Hide placeholder */
-
-            if (placeholder) {
-
-                placeholder.style.display =
-                    "none";
-
-            }
-
-        }
-
-
-
-        /* =================================================
-           NO IMAGE
-        ================================================== */
-
-        else {
-
-            /* Hide image */
-
-            if (image) {
-
-                image.style.display =
-                    "none";
-
-            }
-
-
-            /* Create placeholder if needed */
-
-            if (!placeholder) {
-
-                placeholder =
-                    document.createElement("div");
-
-                placeholder.className =
-                    "lab-placeholder";
-
-                placeholder.textContent =
-                    "IMAGE";
-
-                card.appendChild(placeholder);
-
-            }
-
-
-            placeholder.style.display =
-                "flex";
-
-        }
-
-
-
-        /* =================================================
-           UPDATE DOTS
-        ================================================== */
-
-        dots.forEach((dot, dotIndex) => {
-
-            dot.classList.toggle(
-                "active",
-                dotIndex === currentSlide
-            );
-
-        });
-
-    }
-
-
-
-    /* =====================================================
-       NEXT LAB
-    ====================================================== */
-
-    nextButton.addEventListener(
-        "click",
-        () => {
-
-            currentSlide++;
-
-            if (currentSlide >= labs.length) {
-
-                currentSlide = 0;
-
-            }
-
-            showLab(currentSlide);
-
-        }
-    );
-
-
-
-    /* =====================================================
-       PREVIOUS LAB
-    ====================================================== */
-
-    prevButton.addEventListener(
-        "click",
-        () => {
-
-            currentSlide--;
-
-            if (currentSlide < 0) {
-
-                currentSlide =
-                    labs.length - 1;
-
-            }
-
-            showLab(currentSlide);
-
-        }
-    );
-
-
-
-    /* =====================================================
-       LAB DOTS
-    ====================================================== */
-
-    dots.forEach((dot, index) => {
-
-        dot.addEventListener(
-            "click",
-            () => {
-
-                showLab(index);
+                showQuiz(0);
 
             }
         );
 
-    });
 
 
+        /* =========================================================
+           LABORATORY CAROUSEL
+        ========================================================== */
 
-    /* =====================================================
-       INITIAL LAB
-    ====================================================== */
+        const labColumns =
+            document.querySelectorAll(".lab-column");
 
-    showLab(0);
 
-});
+        const labData = [
+
+            [
+                {
+                    number: "1",
+                    image: "lab_1.jpg",
+                    pdf: "Tangalin_Elective.pdf"
+                },
+
+                {
+                    number: "2",
+                    image: "lab_2.jpg",
+                    pdf: "Tangalin_Lab2.pdf"
+                },
+
+                {
+                    number: "3",
+                    image: "",
+                    pdf: "#"
+                },
+
+                {
+                    number: "4",
+                    image: "",
+                    pdf: "#"
+                },
+
+                {
+                    number: "5",
+                    image: "",
+                    pdf: "#"
+                }
+            ],
+
+            [
+                {
+                    number: "1",
+                    image: "",
+                    pdf: "#"
+                },
+
+                {
+                    number: "2",
+                    image: "",
+                    pdf: "#"
+                },
+
+                {
+                    number: "3",
+                    image: "",
+                    pdf: "#"
+                },
+
+                {
+                    number: "4",
+                    image: "",
+                    pdf: "#"
+                },
+
+                {
+                    number: "5",
+                    image: "",
+                    pdf: "#"
+                }
+            ],
+
+            [
+                {
+                    number: "1",
+                    image: "",
+                    pdf: "#"
+                },
+
+                {
+                    number: "2",
+                    image: "",
+                    pdf: "#"
+                },
+
+                {
+                    number: "3",
+                    image: "",
+                    pdf: "#"
+                },
+
+                {
+                    number: "4",
+                    image: "",
+                    pdf: "#"
+                },
+
+                {
+                    number: "5",
+                    image: "",
+                    pdf: "#"
+                }
+            ]
+
+        ];
+
+
+        labColumns.forEach(
+            (column, columnIndex) => {
+
+                const cardLink =
+                    column.querySelector(
+                        ".lab-card-link"
+                    );
+
+                const card =
+                    column.querySelector(
+                        ".lab-card"
+                    );
+
+                const dots =
+                    column.querySelectorAll(
+                        ".lab-dot"
+                    );
+
+                const nextButton =
+                    column.querySelector(
+                        ".lab-next"
+                    );
+
+                const prevButton =
+                    column.querySelector(
+                        ".lab-prev"
+                    );
+
+
+                let currentSlide = 0;
+
+                const labs =
+                    labData[columnIndex];
+
+
+                function showLab(index) {
+
+                    currentSlide = index;
+
+                    const lab =
+                        labs[currentSlide];
+
+
+                    const number =
+                        card.querySelector(
+                            ".lab-number"
+                        );
+
+
+                    number.innerHTML =
+                        "LAB<br>NO. " +
+                        lab.number;
+
+
+                    cardLink.href =
+                        lab.pdf;
+
+
+                    let image =
+                        card.querySelector(
+                            ".lab-image"
+                        );
+
+                    let placeholder =
+                        card.querySelector(
+                            ".lab-placeholder"
+                        );
+
+
+                    if (lab.image !== "") {
+
+                        if (!image) {
+
+                            image =
+                                document.createElement(
+                                    "img"
+                                );
+
+                            image.className =
+                                "lab-image";
+
+                            image.alt =
+                                "Laboratory " +
+                                lab.number;
+
+                            card.appendChild(
+                                image
+                            );
+
+                        }
+
+
+                        image.src =
+                            lab.image;
+
+                        image.style.display =
+                            "block";
+
+
+                        if (placeholder) {
+
+                            placeholder.style.display =
+                                "none";
+
+                        }
+
+                    }
+
+                    else {
+
+                        if (image) {
+
+                            image.style.display =
+                                "none";
+
+                        }
+
+
+                        if (!placeholder) {
+
+                            placeholder =
+                                document.createElement(
+                                    "div"
+                                );
+
+                            placeholder.className =
+                                "lab-placeholder";
+
+                            placeholder.textContent =
+                                "IMAGE";
+
+                            card.appendChild(
+                                placeholder
+                            );
+
+                        }
+
+
+                        placeholder.style.display =
+                            "flex";
+
+                    }
+
+
+                    dots.forEach(
+                        (dot, dotIndex) => {
+
+                            dot.classList.toggle(
+                                "active",
+                                dotIndex ===
+                                currentSlide
+                            );
+
+                        }
+                    );
+
+                }
+
+
+                nextButton.addEventListener(
+                    "click",
+                    () => {
+
+                        currentSlide++;
+
+                        if (
+                            currentSlide >=
+                            labs.length
+                        ) {
+
+                            currentSlide = 0;
+
+                        }
+
+                        showLab(currentSlide);
+
+                    }
+                );
+
+
+                prevButton.addEventListener(
+                    "click",
+                    () => {
+
+                        currentSlide--;
+
+                        if (currentSlide < 0) {
+
+                            currentSlide =
+                                labs.length - 1;
+
+                        }
+
+                        showLab(currentSlide);
+
+                    }
+                );
+
+
+                dots.forEach(
+                    (dot, index) => {
+
+                        dot.addEventListener(
+                            "click",
+                            () => {
+
+                                showLab(index);
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                showLab(0);
+
+            }
+        );
 
     </script>
 
